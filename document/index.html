@@ -6,6 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        ol li {
+            margin: 0 0 30px 0;
+            border-bottom: 1px solid #ddd;
+            padding: 0 0 30px 0;
+        }
+
+        strong {
+            display: block;
+            color: red;
+        }
+
+        a {
+            font-size: 19px;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,9 +37,10 @@
             <em>2022.05.17</em>
             <strong>넓이는 항상 1200px</strong>
             <pre>
-      화면을 가운데로 오게 하려면 margin을 사용한다. margin은 밖으로 띄우는 성질을 지닌다.
+                화면을 가운데로 오게 하려면 margin을 사용한다. margin은 밖으로 띄우는 성질을 지닌다.
 참고로 width가 없으면 auto는 소용이 없다. 넓이를 지정해줘야한다. 
-margin 개념이 살짝 어렵다.               
+margin 개념이 살짝 어렵다
+.               
 
             </pre>
 
@@ -38,7 +55,7 @@ margin 개념이 살짝 어렵다.
             <a href="./doc/box02.html" target="_blank">box 02</a>
             <p>박스의 기본 성질을 알아보았다.</p>
             <em>2022.05.17</em>
-            <strong>넓이는 항상 1200px</strong>
+            <strong>margin auto는 width가 설정 되어야함</strong>
             <pre>
                 박스가 아닌 것들은 마진을 사이즈를 줄 수 가 없다. 높이나 넓이 같은 거 안먹음
 
@@ -60,17 +77,35 @@ margin 개념이 살짝 어렵다.
                     ./ 나의 형제 레벨
                 ../ 나의 부모 레벨 -->
             <a href="./doc/box03.html" target="_blank">box 03</a>
-            <p>선생님이 하신 토대로 응용해보기</p>
+            <p>
+                박스를 가로로 나열해보고 선생님이 하신 토대로 응용해보기</p>
             <em>2022.05.17</em>
             <strong>% 사이즈는 피큐어에서 상속 받는다</strong>
             <pre>
                 이미지 사이즈가 제 각각일 때
                 figure 사용하면 사이즈 동일
-
-                
-
             </pre>
         </li>
+
+        <li>
+            <a href="./doc/box04.html" target="_blank">box 04</a>
+            <p>레이아웃의 기초 박스의 위치변경. diplay flex를 이용한 박스 배열</p>
+            <em>2022.05.18</em>
+            <strong>박스를 중앙에, 박스를 양 사이드로</strong>
+            <pre>
+                display: flex를 적으면 wide - auto 성질 사라짐
+                justify-content: flex-end; -> 오른쪽에 붙음
+                justify-content: center; -> 가운데에 붙음
+                justify-content: space-between; -> 양쪽에 붙음
+                → 세개 일 때 가운데 있는 건 정확히 가운데가 아니다 사이가 너비가 똑같다는 의미
+
+
+
+
+                
+            </pre>
+        </li>
+
     </ol>
 
 </body>

@@ -1,0 +1,78 @@
+h1 {
+    line-height: 100px;
+    background-color: #f00;
+
+}
+
+nav {
+    line-height: 100px;
+    background-color: #00f;
+}
+
+.right {
+    line-height: 100px;
+    background: yellow;
+}
+
+.header01 {
+    display: flex;
+}
+
+.header02 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header03 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header04 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header05 {
+    display: flex;
+
+}
+
+.header05 nav {
+    margin: 0 0 0 auto;
+}
+
+.header06 {
+    display: flex;
+
+}
+
+.header06 nav {
+    margin: 0 auto 0 0;
+}
+
+/* menu 만들기 */
+.basic {
+    line-height: 100px;
+}
+
+.basic .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.basic nav {
+    margin: 0 0 0 auto;
+}
+
+
+.basic nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.basic .icon {
+    margin: 0 0 0 30px;
+}
