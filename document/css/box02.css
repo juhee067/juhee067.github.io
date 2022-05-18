@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    margin: 30px auto;
+    width: 600px;
+    border: 1px solid #333;
+
+}
+
+.box01 {
+    background: #ff0;
+    margin: 0 auto;
+}
+
+.box02 {
+    background: #f00;
+    padding: 30px;
+}
+
+.box03 {
+    /* inline인 strong tag를 박스로 바꿈 */
+    display: block;
+    margin: 100px auto;
+    padding: 100px 30px;
+}
