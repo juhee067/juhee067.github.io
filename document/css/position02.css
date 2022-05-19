@@ -1,0 +1,79 @@
+body {
+    background-color: #333;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -500px;
+    width: 500px;
+    height: 100vh;
+    background-color: #fff;
+    transition: 0.5s;
+
+}
+
+nav.oo {
+    left: 0;
+}
+
+
+.mpoen {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+}
+
+.mpoen span {
+    position: absolute;
+    left: 5px;
+
+    right: 5px;
+    /* ? 라이트 쓰고 막대 나타남*/
+    display: block;
+    height: 3px;
+    background-color: rgb(255, 0, 0);
+    transition: 0.5s;
+
+}
+
+.mpoen span:nth-child(1) {
+    top: 5px;
+}
+
+.mpoen.oo span:nth-child(1) {
+    display: none;
+    opacity: 0;
+}
+
+
+.mpoen span:nth-child(2) {
+    top: 14px;
+}
+
+.mpoen.oo span:nth-child(2) {
+    transform: rotate(45deg);
+    background-color: yellow;
+}
+
+
+.mpoen span:nth-child(3) {
+    top: 14px;
+}
+
+.mpoen.oo span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+
+.mpoen span:nth-child(4) {
+    bottom: 5px;
+}
+
+.mpoen.oo span:nth-child(4) {
+    display: none;
+    opacity: 0;
+}
