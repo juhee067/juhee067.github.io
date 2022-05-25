@@ -1,0 +1,88 @@
+.face {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+
+.eye01 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 100px;
+    top: 120px;
+    border-top: 3px solid #ffff;
+    border-left: 3px solid #ffff;
+    border-style: solid double;
+    transform: rotate(45deg);
+}
+
+.eye02 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 100px;
+    top: 120px;
+    border-top: 3px solid #ffff;
+    border-right: 3px solid #ffff;
+    transform: rotate(-45deg);
+
+}
+
+.mouse {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 200px;
+    left: 180px;
+
+
+    border-top: 3px solid #ffff;
+    border-left: 3px solid #ffff;
+    transform: rotate(225deg);
+
+}
+
+.face.oo .eye01 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 100px;
+    top: 120px;
+    border-top: 3px solid #ffff;
+    border-left: 3px solid #ffff;
+    border-style: solid double;
+    transform: rotate(-135deg);
+}
+
+.face.oo .eye02 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 100px;
+    top: 120px;
+    border-top: 3px solid #ffff;
+    border-right: 3px solid #ffff;
+    transform: rotate(135deg);
+
+}
+
+.face.oo .mouse {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 300px;
+    left: 180px;
+
+
+    border-top: 3px solid #ffff;
+    border-left: 3px solid #ffff;
+    transform: rotate(45deg);
+
+}
