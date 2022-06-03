@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            line-height: 100vh;
+
+        }
+
+        header {
+            background: #f00;
+
+        }
+
+        main {
+            background: #ff0;
+
+        }
+
+        footer {
+            background: #00f;
+
+        }
+
+        .container {
+            display: flex;
+
+        }
+
+        .container figure {
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .container figure:nth-child(2) {
+            background: #333;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky">
+        header
+
+    </header>
+
+    <main class="sticky">
+
+    </main>
+    <section class="sticky">
+        <div class="container">
+            <figure>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vitae perferendis optio aspernatur
+                similique cum veritatis nam quam, aperiam tempora ipsam culpa cupiditate repudiandae, delectus ea
+                repellat reiciendis. Esse perferendis enim blanditiis quae voluptatum ipsam aliquid! Corporis accusamus
+                quae dolorum totam, perspiciatis sed asperiores doloribus repudiandae cum omnis ut eum consectetur
+                aspernatur id? Magni sequi doloribus natus aperiam ipsa quam cum beatae delectus dolorum ducimus quae
+                eius tenetur aliquid, vero, possimus exercitationem sit! Quibusdam natus impedit nam cumque possimus a
+                fuga, necessitatibus quia in, explicabo iste? Eligendi natus eius dicta eveniet, aliquid sed porro
+                suscipit debitis placeat in quas autem?
+            </figure>
+            <figure>
+
+            </figure>
+        </div>
+    </section>
+
+    <footer class="sticky">
+        footer
+    </footer>
+
+</body>
+
+</html>
