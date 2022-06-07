@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover01</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -0.025em;
+            /* 폰트 사이즈의 몇배, em을 사용 ,자간 조절*/
+            margin: 0 0 10px 0;
+        }
+
+        section p {
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: -0.025em;
+            /* 한글 자간은 붙여서 쓰는 것이 이쁘다.*/
+            margin: 0 0 30px 0;
+        }
+
+        section .container {
+            /* 컨테이너의 자식들만 옆으로 배열된다. 후손들은 옆으로 배열 안됨.*/
+
+            display: flex;
+            gap: 30px;
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        section .container figure {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+            /* figure 영역에 넘어가는 것은 다 안보이게 하는 것*/
+
+        }
+
+        section img {
+            max-width: 100%;
+
+        }
+
+
+
+        /*section011111111111111111111111111111111111111111111111111111111111*/
+        .hover01 .container figure .box {
+            position: absolute;
+            top: 0;
+            /* 박스의 크기만큼 밑으로 내려간다*/
+            left: 0;
+            width: 0;
+            /* 100%하면 왜 가운데로 오는지*/
+            height: 100%;
+            background: rgba(51, 51, 51, 1);
+            /*bg만 투명하게 함, 마지막 opacity지정으로*/
+            color: #fff;
+            /* 정중앙에 오게 하는 공식 DJA*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*opacity: 0.3;
+            박스 내의 모든 것들을 투명하게 함 텍스트도*/
+            transition: width 0.5s;
+
+        }
+
+        .hover01 .container figure:hover .box {
+            width: 100px;
+        }
+
+        .hover01 .container figure img {
+            transition: transform 0.5s;
+        }
+
+        .hover01 .container figure:hover img {
+            transform: translateX(100px);
+        }
+
+        /*section02222222222222222222222222222222222222222222222222222222222222*/
+        .hover02 {
+            padding: 100px 0;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .hover02 h2 {
+            font-size: 24px;
+            font-weight: 100;
+            letter-spacing: -0.025em;
+
+            margin: 0 0 10px 0;
+        }
+
+        .hover02 p {
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: -0.025em;
+
+            margin: 0 0 30px 0;
+        }
+
+        .hover02 .container {
+
+            gap: 30px;
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        .hover02 .container figure {
+            position: relative;
+            flex: 1;
+
+
+
+        }
+
+        .hover02 .container figure::before {
+
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+            transition: 0.5s;
+            box-sizing: border-box;
+            opacity: 0;
+
+        }
+
+        .hover02 .container figure::after {
+
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 1px solid #000;
+            border-right: 1px solid #000;
+            transition: 0.5s 0.3s;
+            opacity: 0;
+        }
+
+        .hover02 img {
+            max-width: 100%;
+
+        }
+
+        .hover02 .container figure:hover::before {
+
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .hover02 .container figure:hover::after {
+
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+
+        nav {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            line-height: 50px;
+            text-align: center;
+        }
+
+
+
+
+        /* section033333333333333333333333333333333333333333 */
+
+        .hover03 figure::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 10px;
+
+            background: linear-gradient(to left, #f00, #ff0);
+
+            transition: 0.5s 1.5s;
+
+        }
+
+        .hover03 figure:hover::before {
+            width: 100%;
+
+            transition: 0.5s;
+        }
+
+        .hover03 figure::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 0%;
+            background: linear-gradient(to bottom, #f00, #ff0);
+            transition: 0.5s 1s;
+
+        }
+
+        .hover03 figure:hover::after {
+            height: 100%;
+
+            transition: 0.5s 0.5s;
+        }
+
+        .hover03 figure .box::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 10px;
+            background: linear-gradient(to left, #ff0, #f00);
+            transition: 0.5s 0.5s;
+
+        }
+
+        .hover03 figure:hover .box::before {
+            width: 100%;
+
+            transition: 0.5s 1s;
+        }
+
+        .hover03 figure .box::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 10px;
+            height: 0;
+            background: linear-gradient(to bottom, #ff0, #f00);
+            transition: 0.5s;
+
+
+        }
+
+        .hover03 figure:hover .box::after {
+            height: 100%;
+            transition: 0.5s 1.5s;
+        }
+
+        /* section044444444444444444444444444444444444444444444444444444444 */
+
+
+        .float {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 300px;
+
+
+        }
+
+
+
+        .hover04 .container figure:hover .box {
+            opacity: 0.5;
+        }
+
+
+        .hover04 figure .float::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 10px;
+            background: linear-gradient(to right, rgba(254, 228, 121, 0.775), rgb(232, 168, 255));
+            transition: 0.5s 0.5s;
+
+        }
+
+        .hover04 figure:hover .float::before {
+            width: 100%;
+
+            transition: 0.5s 1s;
+        }
+
+        .hover04 figure .float::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 10px;
+            height: 0;
+            background: linear-gradient(to bottom, rgb(232, 168, 255), rgba(254, 228, 121, 0.775));
+            transition: 0.5s;
+
+
+        }
+
+        .hover04 figure:hover .float::after {
+            height: 100%;
+            transition: 0.5s 1.5s;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        /*다단메뉴뉴ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ*/
+        nav>ul {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        nav>ul>li {
+            position: relative;
+            flex: 1;
+            border-left: 1px solid #ddd;
+        }
+
+        nav>ul>li::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            /* a. display: block;*/
+            width: 0;
+            height: 3px;
+            background-color: #f00;
+            /*margin: 0 auto하면 왜 가운데서 늘어나는지
+            a. margin: 0 auto;*/
+            transition: 0.5s;
+        }
+
+        nav>ul>li:hover::after {
+            width: 100%;
+
+        }
+
+        nav>ul>li:last-child {
+            border-right: 1px solid #ddd;
+        }
+
+        nav>ul>li a {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="">menu1</a></li>
+            <li><a href="">menu2</a></li>
+            <li><a href="">menu3</a></li>
+            <li><a href="">menu4</a></li>
+            <li><a href="">menu5</a></li>
+        </ul>
+    </nav>
+    <!--section01-->
+    <section class="hover01">
+        <h2>hover를 사용해서 position을 배웁니다.</h2>
+        <p>hover를 이용한 position 이해를 배우면서 이쁜 걸 만들어보겠습니다.</p>
+
+        <div class="container">
+            <!--이미지를 일부러 크게 만들어 놓은 것-->
+            <figure>
+
+                <img src="../img/lesedilarona01.jpg" alt="">
+                <!--왜 박스를 넣었는지 다시설명 figure가 기준이 되기 위해서-->
+                <div class="box">
+                    <a href="">HOVER</a>
+                </div>
+            </figure>
+
+            <figure>
+                <img src="../img/lesedilarona02.jpg" alt="">
+                <div class="box">
+                    <a href="">HOVER</a>
+                </div>
+            </figure>
+            <figure>
+                <img src="../img/lesedilarona03.jpg" alt="">
+                <div class="box">
+                    <a href="">HOVER</a>
+                </div>
+            </figure>
+        </div>
+    </section>
+    <!--section02-->
+    <section class="hover02">
+        <h2>hover를 사용해서 position을 배웁니다.</h2>
+        <p>hover를 이용한 position 이해를 배우면서 이쁜 걸 만들어보겠습니다.</p>
+
+        <div class="container">
+
+            <figure>
+
+                <img src="../img/lesedilarona01.jpg" alt="">
+
+
+            </figure>
+
+            <figure>
+
+                <img src="../img/lesedilarona02.jpg" alt="">
+
+            </figure>
+            <figure>
+
+                <img src="../img/lesedilarona03.jpg" alt="">
+
+            </figure>
+        </div>
+    </section>
+
+    <!--section03-->
+    <section class="hover03">
+        <h2>hover를 사용해서 position을 배웁니다.</h2>
+        <p>hover를 이용한 position 이해를 배우면서 이쁜 걸 만들어보겠습니다.</p>
+
+        <div class="container">
+
+            <figure>
+                <div class="box"><img src="../img/lesedilarona01.jpg" alt=""></div>
+
+
+
+            </figure>
+
+            <figure>
+
+                <div class="box"><img src="../img/lesedilarona02.jpg" alt=""></div>
+
+            </figure>
+            <figure>
+
+                <div class="box"><img src="../img/lesedilarona03.jpg" alt=""></div>
+
+            </figure>
+        </div>
+    </section>
+    <!-- 직접해보기section04-->
+    <section class="hover04">
+        <h2>hover를 사용해서 position을 배웁니다.</h2>
+        <p>hover를 이용한 position 이해를 배우면서 이쁜 걸 만들어보겠습니다.</p>
+
+        <div class="container">
+
+            <figure>
+                <div class="float">
+                </div>
+                <div class="box"><img src="../img/lesedilarona01.jpg" alt=""></div>
+
+
+
+            </figure>
+
+            <figure>
+                <div class="float"></div>
+                <div class="box"><img src="../img/lesedilarona02.jpg" alt=""></div>
+
+            </figure>
+            <figure>
+                <div class="float"></div>
+                <div class="box"><img src="../img/lesedilarona03.jpg" alt=""></div>
+
+            </figure>
+        </div>
+    </section>
+
+</body>
+
+</html>
