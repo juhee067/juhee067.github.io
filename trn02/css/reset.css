@@ -2,7 +2,9 @@
 
 /*
 -------------------------------------
+
 font
+
 --------------------------------------
 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
@@ -10,12 +12,14 @@ font
 
 /*
 -------------------------------------
+
 reset
+
 --------------------------------------
 */
 
 html {
-    /* font-size: 18px; */
+    font-size: 20px;
     box-sizing: border-box;
 }
 
@@ -34,7 +38,7 @@ body {
     font-weight: normal;
     /* color: #333333; */
     line-height: 1;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 ul,
@@ -71,7 +75,7 @@ img {
     border: 0;
     vertical-align: middle;
     font-size: 0;
-    /* max-width: 100%; */
+    max-width: 100%;
 }
 
 table {
@@ -107,12 +111,6 @@ i {
     font-style: normal;
 }
 
-button {
-    color: inherit;
-    border: 0;
-    background: none;
-    cursor: pointer;
-}
 
 hr {
     margin: 0;
